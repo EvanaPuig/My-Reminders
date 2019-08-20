@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CheckListViewController.swift
 //  MyReminders
 //
 //  Created by Evana Margain on 8/20/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CheckListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
