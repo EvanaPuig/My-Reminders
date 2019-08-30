@@ -84,9 +84,9 @@
 		2068D2E0230CB798000EAD04 /* MyReminders */ = {
 			isa = PBXGroup;
 			children = (
-				204F62C92319D57D001DF07A /* Controller */,
-				204F62C82319D576001DF07A /* View */,
 				204F62C72319D565001DF07A /* Model */,
+				204F62C82319D576001DF07A /* View */,
+				204F62C92319D57D001DF07A /* Controller */,
 				2068D2E1230CB798000EAD04 /* AppDelegate.swift */,
 				2068D2E8230CB79A000EAD04 /* Assets.xcassets */,
 				2068D2ED230CB79A000EAD04 /* Info.plist */,
