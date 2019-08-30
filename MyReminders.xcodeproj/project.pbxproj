@@ -39,6 +39,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204F62C72319D565001DF07A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				204F62C32319B59A001DF07A /* CheckListItem.swift */,
+				204F62C52319CF55001DF07A /* TodoList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		204F62C82319D576001DF07A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */,
+				2068D2E5230CB798000EAD04 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		204F62C92319D57D001DF07A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2068D2D5230CB798000EAD04 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +84,11 @@
 		2068D2E0230CB798000EAD04 /* MyReminders */ = {
 			isa = PBXGroup;
 			children = (
+				204F62C92319D57D001DF07A /* Controller */,
+				204F62C82319D576001DF07A /* View */,
+				204F62C72319D565001DF07A /* Model */,
 				2068D2E1230CB798000EAD04 /* AppDelegate.swift */,
-				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
-				204F62C32319B59A001DF07A /* CheckListItem.swift */,
-				204F62C52319CF55001DF07A /* TodoList.swift */,
-				2068D2E5230CB798000EAD04 /* Main.storyboard */,
 				2068D2E8230CB79A000EAD04 /* Assets.xcassets */,
-				2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */,
 				2068D2ED230CB79A000EAD04 /* Info.plist */,
 			);
 			path = MyReminders;
