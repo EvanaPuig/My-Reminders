@@ -9,18 +9,16 @@
 import UIKit
 
 class CheckListViewController: UITableViewController {
-    
-    var firstItem: CheckListItem!
+    var checkListItems: [CheckListItem] = []
     
     required init?(coder aDecoder: NSCoder) {
-        firstItem = CheckListItem()
-        firstItem.itemText = "Make food"
         super.init(coder: aDecoder)
+        
+        self.createSampleData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,19 +29,7 @@ class CheckListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
         
         if let label = cell.viewWithTag(1000) as? UILabel {
-            if indexPath.row == 0 {
-                label.text = firstItem.itemText
-            } else if indexPath.row % 5 == 1 {
-                label.text = "Watch a movie"
-            } else if indexPath.row % 5 == 2 {
-                label.text = "Code an app"
-            } else if indexPath.row % 5 == 3 {
-                label.text = "Walk the dog"
-            } else if indexPath.row % 5 == 4 {
-                label.text = "Study design patterns"
-            } else {
-                label.text = "Sleep"
-            }
+            label.text = checkListItems[indexPath.row].itemText
         }
         configureCheckmark(for: cell, at: indexPath)
         
@@ -60,22 +46,35 @@ class CheckListViewController: UITableViewController {
     
     func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
-            if indexPath.row == 0 {
-                if firstItem.isChecked {
-                    cell.accessoryType = .checkmark
-                } else {
-                    cell.accessoryType = .none
-                }
-                firstItem.isChecked = !firstItem.isChecked
+            if checkListItems[indexPath.row].isChecked {
+                cell.accessoryType = .checkmark
             } else {
-                if cell.accessoryType == .none {
-                    cell.accessoryType = .checkmark
-                } else {
-                    cell.accessoryType = .none
-                }
-                tableView.deselectRow(at: indexPath, animated: true)
+                cell.accessoryType = .none
             }
+            checkListItems[indexPath.row].isChecked = !checkListItems[indexPath.row].isChecked
         }
     }
 }
 
+extension CheckListViewController {
+    func createSampleData() {
+        
+        for i in 0...5 {
+            if i == 0 {
+                checkListItems.append(CheckListItem.init(itemText: "Run"))
+            } else if i == 1 {
+                checkListItems.append(CheckListItem.init(itemText: "Watch a movie"))
+            } else if i == 2 {
+                checkListItems.append(CheckListItem.init(itemText: "Code an app"))
+            } else if i == 3 {
+                checkListItems.append(CheckListItem.init(itemText: "Walk the dog"))
+            } else if i == 4 {
+                checkListItems.append(CheckListItem.init(itemText: "Study design patterns"))
+            } else {
+                checkListItems.append(CheckListItem.init(itemText: "Sleep"))
+            }
+        }
+        
+        print(checkListItems)
+    }
+}
