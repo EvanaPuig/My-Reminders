@@ -34,8 +34,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8tg-UZ-t7B" firstAttribute="leading" secondItem="yhS-Iy-UPp" secondAttribute="leading" constant="20" symbolic="YES" id="OT1-Qp-szp"/>
-                                        <constraint firstItem="8tg-UZ-t7B" firstAttribute="top" secondItem="yhS-Iy-UPp" secondAttribute="top" constant="5" id="UZZ-Oj-cs4"/>
-                                        <constraint firstAttribute="bottom" secondItem="8tg-UZ-t7B" secondAttribute="bottom" constant="5" id="rkx-y6-RLV"/>
+                                        <constraint firstItem="8tg-UZ-t7B" firstAttribute="top" secondItem="yhS-Iy-UPp" secondAttribute="top" priority="750" constant="5" id="UZZ-Oj-cs4"/>
+                                        <constraint firstAttribute="bottom" secondItem="8tg-UZ-t7B" secondAttribute="bottom" priority="750" constant="5" id="rkx-y6-RLV"/>
                                         <constraint firstAttribute="trailing" secondItem="8tg-UZ-t7B" secondAttribute="trailing" constant="20" symbolic="YES" id="xs3-em-j74"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -46,11 +46,45 @@
                             <outlet property="delegate" destination="ear-1R-6Zy" id="MYV-lv-8Dn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="K99-3o-nF1"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="K99-3o-nF1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JeL-Ub-GSC">
+                            <connections>
+                                <segue destination="MBa-8h-nGt" kind="show" id="cEl-WM-54K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cm-q2-TDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="989.85507246376824" y="156.69642857142856"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="gbT-9v-F9e">
+            <objects>
+                <tableViewController id="MBa-8h-nGt" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbd-EB-Xo8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DY8-Gi-S6a">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DY8-Gi-S6a" id="PRY-ss-wEy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MBa-8h-nGt" id="moK-xV-WKH"/>
+                            <outlet property="delegate" destination="MBa-8h-nGt" id="DpT-2R-zlo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oH7-V7-RFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NP1-U9-o9x">
