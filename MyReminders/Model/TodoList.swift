@@ -11,13 +11,13 @@ import Foundation
 class ToDoList {
     
     var checkListItems: [CheckListItem] = []
+    let randomDescriptions = ["random 1", "random 2", "random 3", "random 4", "random 5"]
     
     init() {
         createSampleData()
     }
     
     func createSampleData() {
-        
         for i in 0...5 {
             if i == 0 {
                 checkListItems.append(CheckListItem.init(itemText: "Run"))
@@ -34,7 +34,15 @@ class ToDoList {
             }
         }
         
-        print(checkListItems)
+    }
+    
+    func newToDo() -> CheckListItem {
+        let randomDescription = randomDescriptions.randomElement()!
+        
+        let item = CheckListItem(itemText: randomDescription)
+        item.isChecked = true
+        checkListItems.append(item)
+        return item
     }
     
 }
