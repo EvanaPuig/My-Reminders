@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="K99-3o-nF1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JeL-Ub-GSC">
                             <connections>
-                                <segue destination="MBa-8h-nGt" kind="show" id="cEl-WM-54K"/>
+                                <segue destination="uDc-fM-b9p" kind="show" id="Jbi-s5-gdk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -58,33 +58,61 @@
             </objects>
             <point key="canvasLocation" x="989.85507246376824" y="156.69642857142856"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="gbT-9v-F9e">
+        <!--AddItem-->
+        <scene sceneID="5uN-Yg-Cd1">
             <objects>
-                <tableViewController id="MBa-8h-nGt" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbd-EB-Xo8">
+                <tableViewController title="Title" id="uDc-fM-b9p" userLabel="AddItem" customClass="AddItemTableViewController" customModule="MyReminders" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vZQ-iy-SXa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DY8-Gi-S6a">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DY8-Gi-S6a" id="PRY-ss-wEy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="s6e-H3-keN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6b2-lB-y6N">
+                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6b2-lB-y6N" id="nbZ-mu-V1h">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-FM-5Tk">
+                                                    <rect key="frame" x="20" y="6" width="374" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
-                            <outlet property="dataSource" destination="MBa-8h-nGt" id="moK-xV-WKH"/>
-                            <outlet property="delegate" destination="MBa-8h-nGt" id="DpT-2R-zlo"/>
+                            <outlet property="dataSource" destination="uDc-fM-b9p" id="Cun-ql-DAr"/>
+                            <outlet property="delegate" destination="uDc-fM-b9p" id="rAK-p7-Xgj"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="qgg-F5-fiL">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="gvS-nO-hVS">
+                            <connections>
+                                <action selector="cancel:" destination="uDc-fM-b9p" id="sSq-p7-apU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="cZL-88-M0I">
+                            <connections>
+                                <action selector="done:" destination="uDc-fM-b9p" id="2Bx-if-Dqj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="DO8-FM-5Tk" id="yPQ-p8-QKq"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oH7-V7-RFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVL-ui-AZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="157"/>
+            <point key="canvasLocation" x="1818.840579710145" y="155.35714285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NP1-U9-o9x">
@@ -96,6 +124,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XhT-kn-BXj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ear-1R-6Zy" kind="relationship" relationship="rootViewController" id="DhG-P7-gRl"/>
                     </connections>
