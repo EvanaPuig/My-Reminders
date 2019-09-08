@@ -28,6 +28,7 @@
 		2068D2E8230CB79A000EAD04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2068D2EB230CB79A000EAD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2068D2ED230CB79A000EAD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A7E58323255D5B000C30AF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		2068D2D5230CB798000EAD04 = {
 			isa = PBXGroup;
 			children = (
+				20A7E58323255D5B000C30AF /* README.md */,
 				2068D2E0230CB798000EAD04 /* MyReminders */,
 				2068D2DF230CB798000EAD04 /* Products */,
 			);
