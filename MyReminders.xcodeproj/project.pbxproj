@@ -12,7 +12,7 @@
 		204F62CB2319FC73001DF07A /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */; };
 		2068D2E2230CB798000EAD04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068D2E1230CB798000EAD04 /* AppDelegate.swift */; };
 		2068D2E4230CB798000EAD04 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068D2E3230CB798000EAD04 /* CheckListViewController.swift */; };
-		2068D2E7230CB798000EAD04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2068D2E5230CB798000EAD04 /* Main.storyboard */; };
+		2068D2E7230CB798000EAD04 /* Checklist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2068D2E5230CB798000EAD04 /* Checklist.storyboard */; };
 		2068D2E9230CB79A000EAD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2068D2E8230CB79A000EAD04 /* Assets.xcassets */; };
 		2068D2EC230CB79A000EAD04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -24,7 +24,7 @@
 		2068D2DE230CB798000EAD04 /* MyReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2068D2E1230CB798000EAD04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2068D2E3230CB798000EAD04 /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
-		2068D2E6230CB798000EAD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2068D2E6230CB798000EAD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Checklist.storyboard; sourceTree = "<group>"; };
 		2068D2E8230CB79A000EAD04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2068D2EB230CB79A000EAD04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2068D2ED230CB79A000EAD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,26 +45,24 @@
 		204F62C72319D565001DF07A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				204F62C32319B59A001DF07A /* CheckListItem.swift */,
-				204F62C52319CF55001DF07A /* TodoList.swift */,
+				20A7E58923255F02000C30AF /* Checklist */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		204F62C82319D576001DF07A /* Storyboards */ = {
+		204F62C82319D576001DF07A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				20A7E58723255EE8000C30AF /* Checklist */,
 				2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */,
-				2068D2E5230CB798000EAD04 /* Main.storyboard */,
 			);
-			path = Storyboards;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		204F62C92319D57D001DF07A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
-				204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */,
+				20A7E58823255EF7000C30AF /* Checklist */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -72,9 +70,9 @@
 		2068D2D5230CB798000EAD04 = {
 			isa = PBXGroup;
 			children = (
-				20A7E58323255D5B000C30AF /* README.md */,
 				2068D2E0230CB798000EAD04 /* MyReminders */,
 				2068D2DF230CB798000EAD04 /* Products */,
+				20A7E58323255D5B000C30AF /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,12 +87,12 @@
 		2068D2E0230CB798000EAD04 /* MyReminders */ = {
 			isa = PBXGroup;
 			children = (
-				20A7E58623255DE8000C30AF /* SupportingFiles */,
 				20A7E58523255DE1000C30AF /* Extensions */,
 				20A7E58423255DD5000C30AF /* Protocols */,
-				204F62C72319D565001DF07A /* ViewModels */,
-				204F62C82319D576001DF07A /* Storyboards */,
+				204F62C82319D576001DF07A /* Storyboard */,
+				20A7E58623255DE8000C30AF /* SupportingFiles */,
 				204F62C92319D57D001DF07A /* ViewControllers */,
+				204F62C72319D565001DF07A /* ViewModels */,
 			);
 			path = MyReminders;
 			sourceTree = "<group>";
@@ -121,6 +119,32 @@
 				2068D2ED230CB79A000EAD04 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		20A7E58723255EE8000C30AF /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				2068D2E5230CB798000EAD04 /* Checklist.storyboard */,
+			);
+			path = Checklist;
+			sourceTree = "<group>";
+		};
+		20A7E58823255EF7000C30AF /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
+				204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */,
+			);
+			path = Checklist;
+			sourceTree = "<group>";
+		};
+		20A7E58923255F02000C30AF /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				204F62C32319B59A001DF07A /* CheckListItem.swift */,
+				204F62C52319CF55001DF07A /* TodoList.swift */,
+			);
+			path = Checklist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +207,7 @@
 			files = (
 				2068D2EC230CB79A000EAD04 /* LaunchScreen.storyboard in Resources */,
 				2068D2E9230CB79A000EAD04 /* Assets.xcassets in Resources */,
-				2068D2E7230CB798000EAD04 /* Main.storyboard in Resources */,
+				2068D2E7230CB798000EAD04 /* Checklist.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,12 +229,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2068D2E5230CB798000EAD04 /* Main.storyboard */ = {
+		2068D2E5230CB798000EAD04 /* Checklist.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2068D2E6230CB798000EAD04 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Checklist.storyboard;
 			sourceTree = "<group>";
 		};
 		2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */ = {
