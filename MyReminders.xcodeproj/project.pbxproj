@@ -42,31 +42,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		204F62C72319D565001DF07A /* Model */ = {
+		204F62C72319D565001DF07A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				204F62C32319B59A001DF07A /* CheckListItem.swift */,
 				204F62C52319CF55001DF07A /* TodoList.swift */,
 			);
-			path = Model;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		204F62C82319D576001DF07A /* View */ = {
+		204F62C82319D576001DF07A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				2068D2EA230CB79A000EAD04 /* LaunchScreen.storyboard */,
 				2068D2E5230CB798000EAD04 /* Main.storyboard */,
 			);
-			path = View;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		204F62C92319D57D001DF07A /* Controller */ = {
+		204F62C92319D57D001DF07A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
 				204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */,
 			);
-			path = Controller;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2068D2D5230CB798000EAD04 = {
@@ -89,14 +89,38 @@
 		2068D2E0230CB798000EAD04 /* MyReminders */ = {
 			isa = PBXGroup;
 			children = (
-				204F62C72319D565001DF07A /* Model */,
-				204F62C82319D576001DF07A /* View */,
-				204F62C92319D57D001DF07A /* Controller */,
+				20A7E58623255DE8000C30AF /* SupportingFiles */,
+				20A7E58523255DE1000C30AF /* Extensions */,
+				20A7E58423255DD5000C30AF /* Protocols */,
+				204F62C72319D565001DF07A /* ViewModels */,
+				204F62C82319D576001DF07A /* Storyboards */,
+				204F62C92319D57D001DF07A /* ViewControllers */,
+			);
+			path = MyReminders;
+			sourceTree = "<group>";
+		};
+		20A7E58423255DD5000C30AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		20A7E58523255DE1000C30AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20A7E58623255DE8000C30AF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				2068D2E1230CB798000EAD04 /* AppDelegate.swift */,
 				2068D2E8230CB79A000EAD04 /* Assets.xcassets */,
 				2068D2ED230CB79A000EAD04 /* Info.plist */,
 			);
-			path = MyReminders;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V94Z4TR6AB;
-				INFOPLIST_FILE = MyReminders/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyReminders/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V94Z4TR6AB;
-				INFOPLIST_FILE = MyReminders/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyReminders/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
