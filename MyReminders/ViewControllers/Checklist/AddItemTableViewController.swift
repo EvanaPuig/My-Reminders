@@ -11,6 +11,7 @@ import UIKit
 protocol AddItemViewControllerDelegate: class {
     func addItemViewControllerDidCancel(_ controller: AddItemTableViewController)
     func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: CheckListItem)
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishEditing item: CheckListItem)
 }
 
 class AddItemTableViewController: UITableViewController {
@@ -32,7 +33,6 @@ class AddItemTableViewController: UITableViewController {
             addBarButton.isEnabled = true
         }
         
-        
         navigationItem.largeTitleDisplayMode = .never
         
         textField.delegate = self
@@ -47,18 +47,22 @@ class AddItemTableViewController: UITableViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
         delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        let item = CheckListItem()
-        if let textfieldText = textField.text {
-            item.itemText = textfieldText
+        if let item = itemToEdit, let text = textField.text {
+            item.itemText = text
+            delegate?.addItemViewController(self, didFinishEditing: item)
+        } else {
+            if let item = todoList?.newToDo() {
+                if let textfieldText = textField.text {
+                    item.itemText = textfieldText
+                }
+                item.isChecked = false
+                delegate?.addItemViewController(self, didFinishAdding: item)
+            }
         }
-        item.isChecked = false
-        delegate?.addItemViewController(self, didFinishAdding: item)
     }
 }
 

@@ -8,11 +8,11 @@
 
 import Foundation
 
-class CheckListItem {
+class CheckListItem: NSObject {
     var itemText = ""
     var isChecked = false
     
-    init() {
+    override init() {
         self.itemText = ""
     }
     
