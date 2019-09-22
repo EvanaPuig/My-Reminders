@@ -68,11 +68,47 @@ class CheckListViewController: UITableViewController {
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: CheckListItem) {
+        guard let checkmark = cell.viewWithTag(1001) as? UILabel else {
+            return
+        }
         if item.isChecked {
-            cell.accessoryType = .checkmark
+            checkmark.text = "√"
         } else {
-            cell.accessoryType = .none
+            checkmark.text = ""
         }
         item.toggleChecked()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddItemSegue" {
+            if let addItemViewController = segue.destination as? AddItemTableViewController {
+                addItemViewController.delegate = self
+                addItemViewController.todoList = todoList
+            }
+        } else if segue.identifier == "EditItemSegue" {
+            if let addItemViewController = segue.destination as? AddItemTableViewController {
+                if let cell = sender as? UITableViewCell,
+                    let indexPath = tableView.indexPath(for: cell) {
+                    let item = todoList.checkListItems[indexPath.row]
+                    addItemViewController.itemToEdit = item
+                    addItemViewController.delegate = self
+                }
+            }
+        }
+    }
+}
+
+extension CheckListViewController: AddItemViewControllerDelegate {
+    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: CheckListItem) {
+        navigationController?.popViewController(animated: true)
+        let rowIndex = todoList.checkListItems.count
+        todoList.checkListItems.append(item)
+        let indexPath = IndexPath(row: rowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
     }
 }

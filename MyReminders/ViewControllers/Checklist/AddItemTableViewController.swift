@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol AddItemViewControllerDelegate: class {
+    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController)
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: CheckListItem)
+}
+
 class AddItemTableViewController: UITableViewController {
+    
+    weak var delegate: AddItemViewControllerDelegate?
+    weak var todoList: ToDoList?
+    weak var itemToEdit: CheckListItem?
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
@@ -16,6 +25,13 @@ class AddItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.itemText
+            addBarButton.isEnabled = true
+        }
+        
         
         navigationItem.largeTitleDisplayMode = .never
         
@@ -32,11 +48,17 @@ class AddItemTableViewController: UITableViewController {
     
     @IBAction func cancel(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-        print("Contents of the textfield \(String(describing: textField.text))")
+        let item = CheckListItem()
+        if let textfieldText = textField.text {
+            item.itemText = textfieldText
+        }
+        item.isChecked = false
+        delegate?.addItemViewController(self, didFinishAdding: item)
     }
 }
 
