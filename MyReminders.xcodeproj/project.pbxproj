@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		204F62C42319B59A001DF07A /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F62C32319B59A001DF07A /* CheckListItem.swift */; };
 		204F62C62319CF55001DF07A /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F62C52319CF55001DF07A /* TodoList.swift */; };
-		204F62CB2319FC73001DF07A /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */; };
+		204F62CB2319FC73001DF07A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F62CA2319FC73001DF07A /* ItemDetailViewController.swift */; };
 		2068D2E2230CB798000EAD04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068D2E1230CB798000EAD04 /* AppDelegate.swift */; };
 		2068D2E4230CB798000EAD04 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068D2E3230CB798000EAD04 /* CheckListViewController.swift */; };
 		2068D2E7230CB798000EAD04 /* Checklist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2068D2E5230CB798000EAD04 /* Checklist.storyboard */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		204F62C32319B59A001DF07A /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 		204F62C52319CF55001DF07A /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
-		204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
+		204F62CA2319FC73001DF07A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		2068D2DE230CB798000EAD04 /* MyReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2068D2E1230CB798000EAD04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2068D2E3230CB798000EAD04 /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2068D2E3230CB798000EAD04 /* CheckListViewController.swift */,
-				204F62CA2319FC73001DF07A /* AddItemTableViewController.swift */,
+				204F62CA2319FC73001DF07A /* ItemDetailViewController.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				204F62C42319B59A001DF07A /* CheckListItem.swift in Sources */,
-				204F62CB2319FC73001DF07A /* AddItemTableViewController.swift in Sources */,
+				204F62CB2319FC73001DF07A /* ItemDetailViewController.swift in Sources */,
 				2068D2E4230CB798000EAD04 /* CheckListViewController.swift in Sources */,
 				2068D2E2230CB798000EAD04 /* AppDelegate.swift in Sources */,
 				204F62C62319CF55001DF07A /* TodoList.swift in Sources */,

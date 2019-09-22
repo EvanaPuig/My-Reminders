@@ -9,12 +9,12 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: class {
-    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController)
-    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: CheckListItem)
-    func addItemViewController(_ controller: AddItemTableViewController, didFinishEditing item: CheckListItem)
+    func addItemViewControllerDidCancel(_ controller: ItemDetailViewController)
+    func addItemViewController(_ controller: ItemDetailViewController, didFinishAdding item: CheckListItem)
+    func addItemViewController(_ controller: ItemDetailViewController, didFinishEditing item: CheckListItem)
 }
 
-class AddItemTableViewController: UITableViewController {
+class ItemDetailViewController: UITableViewController {
     
     weak var delegate: AddItemViewControllerDelegate?
     weak var todoList: ToDoList?
@@ -66,7 +66,7 @@ class AddItemTableViewController: UITableViewController {
     }
 }
 
-extension AddItemTableViewController: UITextFieldDelegate {
+extension ItemDetailViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
