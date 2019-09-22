@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wcX-VT-vhb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,15 +12,15 @@
             <objects>
                 <tableViewController id="ear-1R-6Zy" customClass="CheckListViewController" customModule="MyReminders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjf-pp-aLs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="fGn-Mr-P3m">
-                                <rect key="frame" x="0.0" y="28" width="600" height="31"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="31"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fGn-Mr-P3m" id="yhS-Iy-UPp">
-                                    <rect key="frame" x="0.0" y="0.0" width="536.5" height="31"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350.5" height="31"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-UZ-t7B">
@@ -28,7 +30,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-MF-Jvz">
-                                            <rect key="frame" x="34" y="11" width="15" height="24"/>
+                                            <rect key="frame" x="30" y="11" width="15" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -36,10 +38,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="t5N-MF-Jvz" firstAttribute="top" secondItem="yhS-Iy-UPp" secondAttribute="topMargin" id="1uV-5h-v8T"/>
+                                        <constraint firstItem="t5N-MF-Jvz" firstAttribute="leading" secondItem="yhS-Iy-UPp" secondAttribute="leading" constant="30" id="BLn-vE-825"/>
                                         <constraint firstItem="8tg-UZ-t7B" firstAttribute="leading" secondItem="yhS-Iy-UPp" secondAttribute="leading" constant="69" id="OT1-Qp-szp"/>
                                         <constraint firstItem="8tg-UZ-t7B" firstAttribute="top" secondItem="yhS-Iy-UPp" secondAttribute="top" priority="750" constant="5" id="UZZ-Oj-cs4"/>
                                         <constraint firstAttribute="bottom" secondItem="8tg-UZ-t7B" secondAttribute="bottom" priority="750" constant="5" id="rkx-y6-RLV"/>
-                                        <constraint firstItem="8tg-UZ-t7B" firstAttribute="leading" secondItem="t5N-MF-Jvz" secondAttribute="trailing" constant="20" id="vfH-mb-rrE"/>
+                                        <constraint firstItem="8tg-UZ-t7B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t5N-MF-Jvz" secondAttribute="trailing" constant="20" id="vfH-mb-rrE"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8tg-UZ-t7B" secondAttribute="trailing" constant="20" symbolic="YES" id="xs3-em-j74"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -70,17 +73,17 @@
             <objects>
                 <tableViewController title="Title" id="uDc-fM-b9p" userLabel="AddItem" customClass="ItemDetailViewController" customModule="MyReminders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vZQ-iy-SXa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="s6e-H3-keN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6b2-lB-y6N">
-                                        <rect key="frame" x="0.0" y="18" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="18" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6b2-lB-y6N" id="nbZ-mu-V1h">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-FM-5Tk">
@@ -136,7 +139,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XhT-kn-BXj">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
