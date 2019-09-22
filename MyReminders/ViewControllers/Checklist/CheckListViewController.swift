@@ -99,7 +99,7 @@ class CheckListViewController: UITableViewController {
     }
 }
 
-extension CheckListViewController: AddItemViewControllerDelegate {
+extension CheckListViewController: ItemDetailViewControllerDelegate {
     func addItemViewControllerDidCancel(_ controller: ItemDetailViewController) {
         navigationController?.popViewController(animated: true)
     }
